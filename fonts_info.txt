@@ -1,0 +1,4 @@
+List of Fonts used in template 
+
+Oswald		http://www.google.com/webfonts/family?family=Oswald&subset=latin
+Six Caps		http://www.google.com/webfonts/family?family=Six+Caps&subset=latin

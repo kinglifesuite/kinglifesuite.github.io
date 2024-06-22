@@ -1,0 +1,212 @@
+/* ===========================forms======================== */
+.form1Holder{width: 100%;position: relative;display: block;}
+#form1{
+	text-transform: none;
+	width: 100%;
+	display: inline-block;
+}
+#form1>a{
+	float: left;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+#form1 select{
+	visibility: hidden;
+	float: left;
+}
+
+.select_1{
+	width: 165px;
+    position: relative;
+    float: left;
+}
+.select_2{
+	width: 30px;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+.select_3{
+	width: 30px;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+.select_4{
+	width: 49px;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+
+
+.searchButton1{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.inp1{width: 190px;position: relative;float: left;display: block;height: 25px;}
+
+/* -------------
+ * Inputs
+ * ------------- */
+.jqTransformInputWrapper {
+	height: 25px;
+	padding: 0px;
+	float:left;
+	width: 100%;
+}
+
+.jqTransformInputInner {
+	padding: 0px;
+	margin: 0px;
+}
+
+.jqTransformInputInner div {
+	height: 25px;
+}
+
+.jqTransformInputInner div input {
+	font-family: 'Arial', sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+	vertical-align: middle;
+	height: 25px;
+	color: #6A6A6A;	
+	border: none;
+	width: 170px;
+	text-transform: uppercase;
+	background: #1d1d1d;
+	padding: 0 10px;
+}
+
+/*  IE6 */
+* html .jqTransformInputInner div input {
+	padding: 6px 0 0 0;
+	margin: 0 0 0 -8px;
+	height:24px;
+}
+/* Ie7 */
+*+ html .jqTransformInputInner div input {
+	padding: 6px 0 0 0;
+	margin-left:-10px;
+	height:24px;
+}
+
+/*hover*/
+.jqTransformInputWrapper_hover{ background-position: left -31px ;}
+.jqTransformInputWrapper_hover div.jqTransformInputInner{ background-position: right -31px ;}
+
+/*focus*/
+.jqTransformInputWrapper_focus{ background-position: left -62px ;}
+.jqTransformInputWrapper_focus div.jqTransformInputInner{ background-position: right -62px ;}
+
+
+
+.jqTransformSafari .jqTransformInputInner div {
+	position: relative;
+	overflow: hidden;
+}
+.jqTransformSafari .jqTransformInputInner div input {
+	background-color: none;
+	position: absolute; 
+}
+
+/* -------------
+ * Selects
+ * ------------- */
+.jqTransformSelectWrapper {
+	width: 100%;
+	position:relative;
+	height: 25px;
+	float:left;
+	background: #1d1d1d;
+}
+
+.jqTransformSelectWrapper div span {
+	font-family: 'Arial', sans-serif;
+	font-size: 11px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	cursor:pointer;
+	color: #6A6A6A;
+	margin: 0 0 0 10px;
+	text-transform: uppercase;
+}
+
+.jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 25px;
+	height: 25px;
+	background: url(../images/arr_1.png) no-repeat 50% 50%;
+}
+
+.jqTransformSelectWrapper ul {
+	position: absolute;
+	width: 100%;
+	top: 30px;
+	left: 0px;
+	list-style: none;
+	background-color: #FFF;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 0px 5px;
+	text-decoration: none;
+	color: #6A6A6A;
+	background-color: #FFF;
+	font-family: 'Arial', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+	background:#e2b61e;
+	color: #fff;
+}
+/* -------------
+ * Radios
+ * ------------- */
+.jqTransformRadioWrapper {float: left;display:block;	}
+.jqTransformRadio {
+	background: transparent url(../images/radio.png) no-repeat center top;
+	vertical-align: middle;
+	height: 19px;
+	width: 19px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+a.jqTransformChecked { background-position: center bottom;}
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.jqTransformHidden {display: none;}

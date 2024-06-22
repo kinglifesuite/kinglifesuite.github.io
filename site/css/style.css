@@ -1,0 +1,203 @@
+/* Left & Right alignment */
+.left { float:left; }
+.right { float:right; }
+.wrapper {width:100%; overflow:hidden; }
+.padNull{padding: 0;}
+.marNull{margin: 0;}
+/* Global properties ======================================================== */
+.glob{width:100%; height:100%; position:absolute; overflow:hidden; }
+body{font-family:Arial, sans-serif; color:#fff; line-height:20px; min-width:980px; min-height:100%; position:absolute; width:100%; height:100%; overflow:hidden; }
+/* Global Structure ========================================================= */
+.main {margin:0px auto 0 auto; 	width: 950px; z-index:2; height:100%; }
+.page_spinner{ position:fixed; background:#111; z-index:99; width:100%; height:100%; top:0; left:0}
+.page_spinner > span{position: absolute; left: 50%; top: 50%;}
+/* ============================= main layout ================================ */
+a{ color:#fff; text-decoration:none; outline:none; font-size: 14px; }
+a:hover{ text-decoration:underline}
+h1{float:left;position: relative;}
+h2{font-family: 'Oswald', sans-serif; color:#e2b61e; font-size:30px; line-height: 30px; width:100%; font-weight: normal; padding-bottom: 23px;}
+p{padding-bottom: 0px; font-size: 12px; color: #5a5a5a; line-height: 18px; padding-bottom: 20px;}
+.center{ padding:0; width:100%; position: relative; display: inline-block;}
+/* ============================= header =============================== */
+header{position: relative; width: 100%; height: 195px; z-index: 3;  text-align: center;}
+#logo{display:inline-block; background: url(../images/logo.png) 0 0 no-repeat; width: 760px; height: 190px; text-indent: -9999px;}
+#logo:hover{text-decoration:none; }
+.logoHolder{ position: relative; height: 194px; display: inline-block;}
+.menu{position:relative; z-index:1; display: inline-block; }
+.menuHolder{ position: relative; width: 950px; z-index: 2; margin: 0 auto; margin-bottom: 1px; height: 36px;}
+#menu {z-index:3; position:relative; display: inline-block;float: left;}
+#menu > li{position:relative; color: white;  text-align: left; height: 36px;display: inline-block;float: left;  margin: 0 36px;}
+#menu > li > a{  display: block; text-transform:uppercase; position:relative;  height: 36px;  z-index: 1;  overflow: hidden;}
+#menu > li > a:hover{text-decoration:none;}
+#menu > li.active > a{text-decoration:none;}
+#menu .marLeft{margin-left: 0px;}
+#menu .marRight{margin-right: 0px;}
+.submenu_1{position:absolute; z-index:2; top: 37px; left: 0; display: block; width: 220px; background: #1d1d1d;}
+.submenu_1 li{ position:relative; display:inline-block;  float: left; width: 100%;  margin: 5px 0;}
+.submenu_1 a{font-size: 11px; color: #fff; display:inline-block; text-transform:uppercase; line-height: 20px; text-align: left;margin-left: 31px;text-indent: 1px;}
+.submenu_1 li > a:hover, .submenu_1 li.sfHover > a{text-decoration:none; color:#6b6969;}
+.submenu_1 .marTop{margin-top: 25px;}
+.submenu_1 .marBot{margin-bottom: 25px;}
+.submenu_2{position:relative; z-index:2;  display: block;}
+.submenu_2 li{ position:relative; display:inline-block;  float: left; width: 100%;  margin: 8px 0; height: 15px;}
+.submenu_2 a{font-size: 11px; color: #fff; display:inline-block; text-transform:uppercase; line-height: 15px; text-align: left;margin-left: 55px;text-indent: 1px;}
+.submenu_2 li > a:hover, .submenu_1 li.sfHover > a{text-decoration:none; color:#6b6969;}
+.submenu_2 .marTop{margin-top: 12px;}
+.submenu_2 .marBot{margin-bottom: 0px;}
+.mText{font-family: 'Oswald', sans-serif; line-height: 36px; color: #fff; font-size: 30px; position: relative;  width: 100%; z-index: 2; text-align: center; text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);}
+.mTextOver{font-family: 'Oswald', sans-serif; line-height: 36px; color: #fff; font-size: 30px; position: absolute;  width: 100%; z-index: 2; text-align: center;}
+._area{position: absolute; width: 100%; height: 100%; top: 0; z-index: 3;left: 0;display: block; background: url(../images/pixel.png);}
+.menuBg{position:absolute; background: url(../images/bg1.png); width: 2600px; left: 50%; margin-left: -1300px;height: 36px;}
+._splash{position: absolute ;width: 100%;display: block;z-index: 3;}
+.splash_menu {z-index:3; position:relative; display: inline-block;float: left;width: 100%;}
+.splash_menu > li{position:relative; color: white;  text-align: center; height: 34px;display: block;float: left;  width: 100%;}
+.splash_menu > li > a{  display: inline-block; text-transform:uppercase; position:relative;  height: 34px;  z-index: 1;}
+.splash_menu > li > a:hover{text-decoration:none;}
+.mText2{font-family: 'Oswald', sans-serif; line-height: 34px; color: #fff; font-size: 30px; position: relative;  width: 100%; z-index: 2; text-align: center; text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);}
+._overPl{position:absolute; background: url(../images/bg1.png); width: 2600px; left: 50%; height: 34px;top: 0;margin-left: -1300px;}
+/* ============================= content =================== */
+#content{position:relative;  z-index: 1; width: 100%; margin: 0 auto; display: block;height: 390px;  float: left;}
+#content > ul{width: 940px; height: 100%; z-index: 0; display: inline-block;position: relative;float: left;overflow: hidden;}
+#content > ul > li{width: 940px; display:block; position:absolute; overflow: hidden;}
+.box{ width: 940px; position: relative; display: inline-block; }
+.space1{display:inline-block; width: 85px;}
+.more{font-family: Arial, sans-serif; color: #fff; font-size: 10px; line-height: 12px; text-decoration: underline;text-transform: uppercase;display: inline-block;}
+.more:hover{text-decoration: none;}
+._arr{background: url(../images/marker.png) 0 50% no-repeat; position: relative; float: right;width: 3px;height: 12px;margin-left: 7px;}
+._arr2{background: url(../images/marker.png) 0 50% no-repeat; position: relative; float: left;width: 3px;height: 20px;margin-right: 7px;}
+.padRight1{padding-right: 35px;}
+.padRight2{padding-right: 45px;}
+.padRight3{padding-right: 55px;}
+.padRight4{padding-right: 45px;}
+.padBot1{padding-bottom: 15px;}
+.padBot2{padding-bottom: 10px;}
+.padBot3{padding-bottom: 26px;}
+.marRight1{margin-right: 10px;}
+.marTop1{margin-top: 5px;}
+.marBot1{margin-bottom: 7px;}
+.marBot2{margin-bottom: 7px;}
+.color1{color: #fff;}
+.color2{color: #e2b61e;}
+._link1{font-size: 11px; color: #626262;}
+._link2{font-size: 12px; color: #fff;}
+._link3{font-size: 12px; color: #e2b61e;cursor: pointer;}
+._link3:hover{color: #fff;}
+._list1{width: 100%; position: relative;}
+._list1 > li{position: relative; width: 100%; height: 28px; border-bottom: 1px solid #282828; background: url(../images/marker.png) 0% 50% no-repeat;}
+._list1 > li > a{font-size: 11px; color: #fff; text-transform: uppercase; margin-left: 16px; line-height: 28px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+._list1 > li > a:hover{color: #e2b61e; text-decoration: none; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+._list1 ._last{border: none;}
+._fig1{width: 230px; position: relative; display: inline-block;float: left;}
+._fig1 img{position: relative; display: inline-block; width: 100%; margin-bottom: 20px;margin-top: 4px;}
+._fig1 figcaption{width: 100%; position: relative;}
+._fig1 p{padding-bottom: 3px;}
+.num_icon{font-family: 'Oswald', sans-serif; font-size: 15px; line-height: 27px; text-align: center; background: url(../images/extra1.png) 0 0 no-repeat; width: 27px; height: 27px; display: inline-block; position: relative; float: left;margin-right: 12px;}
+.patern{position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: url(../images/patern.png);}
+#bgStretch {overflow:hidden; z-index:-1; display: block;}
+#bgStretch img{background-color: #000;}
+.spinner_bg{position: fixed; width: 0px; height: 0px; z-index:10000; left: 50%; top: 50%; display: inline-block;}
+.navGall{position: absolute;display: inline-block;z-index: 2;}
+.navGall > ul{position: absolute;}
+.navGall > ul > li{ position: relative;}
+.navGall > ul > li >a{width: 100%; height: 120px; position: relative;}
+.bthHolder{position: absolute;top: -45px;left: 50%;width: 78px;margin-left: -39px;}
+.prevBtn{width: 38px; height: 38px; display: inline-block; position: relative;float: left;}
+.nextBtn{width: 38px; height: 38px; display: inline-block; position: relative;float: right;}
+.styleText1{text-transform: uppercase;}
+.styleText2{text-transform: uppercase;width: 100%;display: inline-block;color: #565656;font-size: 11px;margin: 14px 0 5px 0;}
+.styleText3{font-family: 'Oswald', sans-serif; text-transform: uppercase; display: inline-block; color: #e2b61e; font-size: 30px; line-height: 30px;margin-top: 20px;float: right;}
+.contentBg{position:absolute; background:#111111; width: 2600px; left: 50%; margin-left: -1300px; height: 100%;}
+.pageBtns{width: 970px; position: absolute; top: 50%; left: -15px;margin-top: -17px;}
+.pagePrev{float: left;}
+.pageNext{float: right;}
+/* ============================= footer ====================== */
+footer{position: absolute; width: 100%; z-index: 4;  height: 68px; display: inline-block;  bottom: 0; float: left;background: #111111;}
+.mainFooter { z-index:2; width: 940px; height: 86px; margin: 0 auto;}
+.textPrivacy{font-family:Arial,sans-serif;  font-size: 11px;   color: #626262;  position:relative; display:inline-block;   font-weight: normal;letter-spacing: 0px;line-height: 16px;text-align: center;}
+.privHold{ line-height: 20px; position: relative; display: inline-block; width: 100%; margin-top: 13px; text-align: center;}
+/*===================================Map=====================================*/
+.google_map{margin:0; width: 310px; height:150px;display: inline-block; position: relative;margin-bottom: 22px; background: #fff;}
+.google_map > span{position: absolute; top: 50%; left: 50%; }
+/* ============================= forms ============================= */
+#ContactForm {
+	padding:0; 
+}
+#ContactForm .bg{
+	padding:0; 
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+#ContactForm .wrapper {
+	overflow:inherit; 
+	min-height:40px; 
+}
+#ContactForm .success {  
+	
+    font-size: 9px; 
+    position:relative; 
+    float:left; 
+	
+    color: #fff; 
+	width: 100%; 
+	line-height: 11px;
+	padding-bottom: 2px;
+}
+#ContactForm label {
+	position:relative; 
+	display:inline-block;  
+	float: left; 
+	width: 100%;
+	padding-bottom: 7px;
+}
+#ContactForm .error,#ContactForm .empty {
+	font-size: 9px; 
+	color: #fff; 
+	line-height:9px; 
+	display:none; 
+	width: 100%; 
+	top:0px; 
+	position:relative; 
+     
+	float: left;
+}
+#ContactForm a {
+	position:relative; 
+	z-index:1; 
+}
+#ContactForm a:hover {text-decoration:none;}
+#ContactForm .input {
+	width: 290px; 
+	padding: 3px 12px; 
+	color: #6A6A6A; 
+	outline:none; 
+	font-size: 11px;  
+	background: #1d1d1d; 
+    
+	line-height: 19px;
+	text-transform: uppercase;
+}
+#ContactForm textarea {
+	overflow:auto; 
+	margin:0; 
+	width: 410px; 
+	height: 145px;  
+	padding: 3px 10px; 
+	color: #6A6A6A; 
+	resize:none; 
+	outline:none; 
+	font-size: 11px;  
+	background: #1d1d1d;
+	font-family: Arial;
+    
+	text-transform: uppercase;
+}
+#ContactForm .block {
+	display:inline-block; 
+	position:relative; 
+	width: 100%; 
+	float: left; 
+}
+.formButtons{position:relative; float: right;  display: inline-block;margin-top: 5px;}
+.formBtn{display:inline-block;  position:relative;  margin-left: 12px;}
+/* ============================= end forms ============================= */
