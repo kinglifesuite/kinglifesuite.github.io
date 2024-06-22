@@ -82,6 +82,13 @@ Primary use:
   text-transform: uppercase;
 }
 
+.m1-txt1-wht {
+  font-family: Poppins-Regular;
+  font-size: 40px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
 
 
 /*//////////////////////////////////////////////////////////////////
