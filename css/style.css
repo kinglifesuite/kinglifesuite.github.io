@@ -38,6 +38,10 @@ Table of Content:
 
 =====================================================================*/
 
+.lobster-font-family {
+  font-family: 'Lobster', cursive;;
+}
+
 [lang] {
   display: none;
 }
