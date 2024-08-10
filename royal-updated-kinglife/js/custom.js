@@ -1,6 +1,99 @@
 ;(function($){
     "use strict"
-    var nav_offset_top = $('.header_area').height()+50; 
+    var nav_offset_top = $('.header_area').height()+50;
+
+    
+    const observer = new IntersectionObserver(events => {
+        events.forEach(event => {
+            if (event.isIntersecting) {
+                event.target.classList.add('fade-in-div');
+                return;
+            }
+        
+            event.target.classList.remove('fade-in-div');
+        });
+    });
+    
+    const leftFadeInElements = document.querySelectorAll('.left-fade-in');
+    leftFadeInElements.forEach(myElement => {observer.observe(myElement);});
+          
+
+    /** Index mail send  */
+
+    $('#contactForm').submit(function(e) {
+        e.preventDefault();
+        const form = new FormData(e.target);
+        const name = form.get("name");
+        const subject = form.get("subject");
+        const message = form.get("message");
+        const body = message + '\n' + `Saygılarımla ${name},`;
+        window.location.href = `mailto:selimege88@gmail.com?Subject=${subject}&body=${body}&`;
+        return false
+    });
+
+
+    /*$('#contactForm').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            subject: {
+                required: true,
+                minlength: 4
+            },
+            number: {
+                required: true,
+                minlength: 5
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true,
+                minlength: 20
+            }
+        },
+        messages: {
+            name: {
+                required: "come on, you have a name, don't you?",
+                minlength: "your name must consist of at least 2 characters"
+            },
+            subject: {
+                required: "come on, you have a subject, don't you?",
+                minlength: "your subject must consist of at least 4 characters"
+            },
+            number: {
+                required: "come on, you have a number, don't you?",
+                minlength: "your Number must consist of at least 5 characters"
+            },
+            email: {
+                required: "no email, no message"
+            },
+            message: {
+                required: "um...yea, you have to write something to send this form.",
+                minlength: "thats all? really?"
+            }
+        }
+    }).submit(function(e) {
+        e.preventDefault();
+
+        console.log("!LOGOGOGOfirst");
+        const form = new FormData(e.target);
+        const name = form.get("name");
+        const email = form.get("email");
+        const subject = form.get("subject");
+        const message = form.get("message");
+        console.log(name, email, subject, message, "!LOGOGOGO");
+        //href="mailto:selimege88@gmail.com?Subject=KingLifeSuiteHakkında%20Contact"
+        return false
+    });*/
+
+
+    /** */
+
+
     /*-------------------------------------------------------------------------------
 	  Navbar 
 	-------------------------------------------------------------------------------*/

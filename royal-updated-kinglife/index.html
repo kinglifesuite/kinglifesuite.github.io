@@ -35,7 +35,7 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
                             <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li>
                             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                             <li class="nav-item submenu dropdown">
@@ -49,8 +49,8 @@
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                             <li class="nav-item">
                                 <select onchange="select_language(this.options[this.selectedIndex].value)">
-                                    <option value="en" selected>English</option>
-                                    <option value="tr">Türkçe</option>
+                                    <option value="en">English</option>
+                                    <option value="tr" selected>Türkçe</option>
                                 </select>
                             </li>
                         </ul>
@@ -183,7 +183,7 @@
         <!--================ Facilities Area  =================-->
         
         <!--================ About History Area  =================-->
-        <section class="about_history_area section_gap">
+        <section id="about" class="about_history_area section_gap">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 d_flex align-items-center">
@@ -193,7 +193,7 @@
                             <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6s left-fade-in">
                         <img class="img-fluid" src="image/about_bg.jpg" alt="img">
                     </div>
                 </div>
@@ -269,6 +269,92 @@
             </div>
         </section>
         <!--================ Testimonial Area  =================-->
+
+           <!--================Gallery Area =================-->
+           <section class="gallery_area section_gap">
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_color">King Life Suite Gallery</h2>
+                    <p>Who are in extremely love with eco friendly system.</p>
+                </div>
+                <div class="row imageGallery1" id="gallery">
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/01.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/01.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/02.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/02.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/03.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/03.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/04.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/04.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/06.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/05.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/05.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/06.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/01-1.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/01-1.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/02-1.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/02-1.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery_item">
+                        <div class="gallery_img">
+                            <img src="image/gallery/03-1.jpg" alt="">
+                            <div class="hover">
+                            	<a class="light" href="image/gallery/03-1.jpg"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Gallery Area =================-->
         
         <!--================ Latest Blog Area  =================-->
         <section class="latest_blog_area section_gap">
@@ -345,29 +431,27 @@
                         <div class="contact_info">
                             <div class="info_item">
                                 <i class="lnr lnr-home"></i>
-                                <h6>California, United States</h6>
-                                <p>Santa monica bullevard</p>
+                                <h6>Samsun, Türkiye</h6>
+                                <p>Atakum, Yenimahalle Mahallesi, İsmet İnönü Cd. 117/2,  55270</p>
                             </div>
-                            <div class="info_item">
+                            <div class="info_item mb-2">
                                 <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">00 (440) 9865 562</a></h6>
-                                <p>Mon to Fri 9am to 6 pm</p>
+                                <h6><a href="tel:+905432263538">+90 (543) 226 35 38</a></h6>
+                                <h6><a href="tel:+905322252202">+90 (532) 225 22 02</a></h6>
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
-                                <p>Send us your query anytime!</p>
+                                <h6><a href="mailto:selimege88@gmail.com?Subject=KingLifeSuiteHakkında%20Contact">selimege88@gmail.com</a></h6>
+                                <p lang="en">Send us your query anytime!</p>
+                                <p lang="tr">Her zaman bize yazabilirsiniz!</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row contact_form" onsubmit="return false" method="post" id="contactForm" novalidate="novalidate">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
@@ -379,7 +463,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
+                                <button type="submit" class="btn theme_btn button_hover">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -488,12 +572,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
         <script src="js/jquery.ajaxchimp.min.js"></script>
         <script src="js/mail-script.js"></script>
+        <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope-min.js"></script>
         <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
         <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-        <script src="js/mail-script.js"></script>
         <script src="js/stellar.js"></script>
         <script src="vendors/lightbox/simpleLightbox.min.js"></script>
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <script type="text/javascript" src="js/custom.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/custom.js" defer></script>
     </body>
 </html>

@@ -49,6 +49,32 @@ Table of Content:
   display: unset;
 }
 
+html { scroll-behavior: smooth; }
+
+.fade-in-div {
+  animation: left-to-right-fade-in 1s ease-in;
+  -webkit-mask-repeat: no-repeat;
+}
+
+@keyframes left-to-right-fade-in {
+  0% {
+    -webkit-mask-size: 0%;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  100% {
+    -webkit-mask-size: 100%;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
+
 .google-maps {
 
   position: relative;
