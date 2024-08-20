@@ -39,13 +39,14 @@ Table of Content:
 =====================================================================*/
 
 .lobster-font-family {
-  font-family: 'Lobster', cursive;;
+  font-family: 'Lobster', cursive;
+  font-size: 75px !important;
 }
 
 [lang] {
   display: none;
 }
-[lang=en] {
+[lang=tr] {
   display: unset;
 }
 

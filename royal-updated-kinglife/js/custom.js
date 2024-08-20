@@ -18,6 +18,19 @@
     leftFadeInElements.forEach(myElement => {observer.observe(myElement);});
           
 
+    /** LANG */
+
+    $('#lang-en').click(function(){
+        select_language("en")
+    });
+
+
+    $('#lang-tr').click(function(){
+        select_language("tr")
+    });
+
+    /** LANG END */
+
     /** Index mail send  */
 
     $('#contactForm').submit(function(e) {
@@ -27,7 +40,7 @@
         const subject = form.get("subject");
         const message = form.get("message");
         const body = message + '\n' + `Saygılarımla ${name},`;
-        window.location.href = `mailto:selimege88@gmail.com?Subject=${subject}&body=${body}&`;
+        window.location.href = `mailto:info@kinglifesuite.com?Subject=${subject}&body=${body}&`;
         return false
     });
 
@@ -86,7 +99,7 @@
         const subject = form.get("subject");
         const message = form.get("message");
         console.log(name, email, subject, message, "!LOGOGOGO");
-        //href="mailto:selimege88@gmail.com?Subject=KingLifeSuiteHakkında%20Contact"
+        //href="mailto:info@kinglifesuite.com?Subject=KingLifeSuiteHakkında%20Contact"
         return false
     });*/
 
