@@ -1082,8 +1082,9 @@ button:focus {
 
 .main-banner .caption {
   position: absolute;
+  left: 0;
   top: 50%;
-  right: 25%;
+  right: 50%;
   transform: translateY(-50%);
 }
 
