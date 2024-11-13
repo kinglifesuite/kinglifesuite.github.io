@@ -3618,12 +3618,11 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  transform: translateY(-25%);
 }
 
 .navbar-brand:focus, .navbar-brand:hover {

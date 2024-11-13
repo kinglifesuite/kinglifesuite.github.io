@@ -469,7 +469,7 @@ html { scroll-behavior: smooth; }
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: rgba(250, 250, 250, 0.15);
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -610,8 +610,9 @@ a:hover, a:focus {
 body {
   line-height: 24px;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Alegreya SC", serif;
   font-weight: 300;
+  font-style: normal;
   color: #777777;
 }
 
@@ -620,8 +621,9 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Alegreya SC", serif;
   font-weight: 600;
+  font-style: normal;
 }
 
 button:focus {
