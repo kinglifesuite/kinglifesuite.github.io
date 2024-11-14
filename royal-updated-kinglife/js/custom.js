@@ -41,70 +41,10 @@
     const name = form.get("name");
     const subject = form.get("subject");
     const message = form.get("message");
-    const body = message + "\n" + `Saygılarımla ${name},`;
+    const body = "Merhabalar,%0D%0A" + message + "%0D%0A%0D%0A%0D%0A" + `Saygılarımla ${name},`; // <br /> ...
     window.location.href = `mailto:info@kinglifesuite.com?Subject=${subject}&body=${body}&`;
     return false;
   });
-
-  /*$('#contactForm').validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            subject: {
-                required: true,
-                minlength: 4
-            },
-            number: {
-                required: true,
-                minlength: 5
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            message: {
-                required: true,
-                minlength: 20
-            }
-        },
-        messages: {
-            name: {
-                required: "come on, you have a name, don't you?",
-                minlength: "your name must consist of at least 2 characters"
-            },
-            subject: {
-                required: "come on, you have a subject, don't you?",
-                minlength: "your subject must consist of at least 4 characters"
-            },
-            number: {
-                required: "come on, you have a number, don't you?",
-                minlength: "your Number must consist of at least 5 characters"
-            },
-            email: {
-                required: "no email, no message"
-            },
-            message: {
-                required: "um...yea, you have to write something to send this form.",
-                minlength: "thats all? really?"
-            }
-        }
-    }).submit(function(e) {
-        e.preventDefault();
-
-        console.log("!LOGOGOGOfirst");
-        const form = new FormData(e.target);
-        const name = form.get("name");
-        const email = form.get("email");
-        const subject = form.get("subject");
-        const message = form.get("message");
-        console.log(name, email, subject, message, "!LOGOGOGO");
-        //href="mailto:info@kinglifesuite.com?Subject=KingLifeSuiteHakkında%20Contact"
-        return false
-    });*/
-
-  /** */
 
   /*-------------------------------------------------------------------------------
 	  Navbar 
@@ -148,13 +88,6 @@
     }
   }
   testimonialSlider();
-
-  //------- Mailchimp js --------//
-
-  function mailChimp() {
-    $("#mc_embed_signup").find("form").ajaxChimp();
-  }
-  mailChimp();
 
   /* ===== Parallax Effect===== */
 

@@ -38,6 +38,16 @@ Table of Content:
 
 =====================================================================*/
 
+/*----------------------------------------------------*/
+/*font Variables*/
+/*Color Variables*/
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+.col-md-offset-right-1, .col-lg-offset-right-1 {
+  margin-right: 8.33333333%;
+}
+
+
 .lobster-font-family {
   font-family: 'Lobster', cursive;
   font-size: 75px !important;
@@ -559,16 +569,6 @@ html { scroll-behavior: smooth; }
   .header-area .main-nav .nav {
     display: flex !important;
   }
-}
-
-
-/*----------------------------------------------------*/
-/*font Variables*/
-/*Color Variables*/
-/*=================== fonts ====================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-.col-md-offset-right-1, .col-lg-offset-right-1 {
-  margin-right: 8.33333333%;
 }
 
 /*---------------------------------------------------- */
@@ -4241,5 +4241,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*---------------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
