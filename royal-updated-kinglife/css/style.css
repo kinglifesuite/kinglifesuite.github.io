@@ -1304,21 +1304,6 @@ button:focus {
   transform-origin: 0 0;
 }
 
-/*=========== breadcrumb_area css =============*/
-.breadcrumb_area {
-  position: relative;
-  padding: 172px 0px 84px;
-  background: #04091e;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.breadcrumb_area .bg-parallax {
-  background: url("../image/about_banner.jpg") no-repeat scroll center 0/cover;
-  opacity: 0.50;
-  z-index: -1;
-}
-
 .page-cover-tittle {
   display: block;
   font-size: 36px;
@@ -1326,73 +1311,10 @@ button:focus {
   color: #fff;
 }
 
-.breadcrumb {
-  text-align: center;
-  background: transparent;
-  padding: 0px;
-  display: inline-block;
-}
-
-.breadcrumb li {
-  display: inline-block;
-  color: #fff;
-}
-
-.breadcrumb li a {
-  color: #fff;
-}
-
-.breadcrumb li + li:before {
-  content: "\e87a";
-  font-family: 'Linearicons-Free';
-  font-size: 14px;
-  font-weight: 600;
-  vertical-align: middle;
-  margin: 0px 10px 0px 7px;
-}
-
-/*============= End banner_area css =============*/
-/*=============Blog Banner css =============*/
-.blog_banner {
-  min-height: 780px;
-  overflow: hidden;
-}
-
-.blog_banner .bg-parallax {
-  background: url(../image/banner/banner-1.jpg) no-repeat scroll center center;
-}
-
-.blog_banner .banner_content {
-  margin-bottom: 0px;
-  margin-top: 106px;
-}
-
-.blog_banner .banner_content h4 {
-  font-size: 60px;
-  line-height: 66px;
-  font-weight: bold;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-}
-
-.blog_banner .banner_content p {
-  font-size: 16px;
-  padding: 0px;
-  margin-bottom: 35px;
-}
-
 .f_48 {
   font-size: 48px;
   line-height: 60px;
   font-weight: 700;
-}
-
-.blog_banner_two {
-  padding: 187px 0px 104px;
-}
-
-.blog_banner_two .bg-parallax {
-  background: url(../image/banner/banner-2.jpg) no-repeat scroll center top/cover;
 }
 
 /*=============End Blog Banner css =============*/
@@ -3745,201 +3667,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #4cd3e3;
 }
 
-.primary-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.primary-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.primary-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.primary-checkbox input:checked + label {
-  background: url(../image/elements/primary-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.confirm-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.confirm-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.confirm-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.confirm-checkbox input:checked + label {
-  background: url(../image/elements/success-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.disabled-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.disabled-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.disabled-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.disabled-checkbox input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-.disabled-checkbox input:checked + label {
-  background: url(../image/elements/disabled-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.primary-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.primary-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.primary-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.primary-radio input:checked + label {
-  background: url(../image/elements/primary-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-.confirm-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.confirm-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.confirm-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.confirm-radio input:checked + label {
-  background: url(../image/elements/success-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
 .disabled-radio {
   width: 16px;
   height: 16px;
@@ -3987,11 +3714,6 @@ h1, h2, h3, h4, h5, h6 {
 .ordered-list {
   list-style: none;
   padding: 0px;
-}
-
-.disabled-radio input:checked + label {
-  background: url(../image/elements/disabled-radio.png) no-repeat center center/cover;
-  border: none;
 }
 
 .default-select {
