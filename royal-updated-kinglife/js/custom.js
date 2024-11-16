@@ -2,6 +2,8 @@
   "use strict";
   var nav_offset_top = $(".header_area").height() + 50;
 
+  console.log("VERSION 1.0.0 published")
+
   const observer = new IntersectionObserver((events) => {
     events.forEach((event) => {
       if (event.isIntersecting) {
