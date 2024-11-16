@@ -1141,7 +1141,7 @@ button:focus {
 
 
 .banner_area .bg-parallax {
-  /* TODO bg image background: url("../image/banner_bg.jpg") no-repeat scroll center 0/cover;*/
+  /* TODO bg image background: url("../image/banner_bg.webp") no-repeat scroll center 0/cover;*/
   opacity: 0.50;
 }
 
