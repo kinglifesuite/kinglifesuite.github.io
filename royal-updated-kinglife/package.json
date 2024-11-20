@@ -1,0 +1,9 @@
+{
+  "name": "kinglifesuite",
+  "version": "1.0.0",
+  "description": "king life suite otel webpage",
+  "main": "index.js",
+  "repository": "https://github.com/kinglifesuite/kinglifesuite.github.io.git",
+  "author": "karaoglan",
+  "license": "MIT"
+}
