@@ -8,5 +8,11 @@ gulp.task("minify-html", () => {
     .pipe(gulp.dest("./"));
 });
 
+gulp.task("copy-all-public", () => {
+    return gulp
+        .src("./**")
+        .pipe(gulp.dest("./public"));
+});
+
 // Define default task
-gulp.task("default", gulp.parallel("minify-html"));
+gulp.task("default", gulp.parallel("minify-html", "copy-all-public"));
