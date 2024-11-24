@@ -4,6 +4,13 @@ const terser = require('gulp-terser');
 const rename = require('gulp-rename');
 const sharp = require('sharp');
 const through2 = require('through2');
+const htmlmin = require('gulp-htmlmin');
+
+gulp.task('minify-html', () => {
+  return gulp.src('index.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./'));
+});
 
 // CSS minification
 gulp.task('minify-css', () => {
