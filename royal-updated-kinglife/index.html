@@ -24,16 +24,13 @@
     />
     <meta http-equiv="Content-Language" content="tr" />
 
-    <link rel="icon" href="image/favicon.png" type="image/png" />
+    <link rel="icon" href="image/kinglife/optimized/favicon-small.webp" type="image/webp" />
     <title>
       King Life Suite Otel | Atakum Samsun' da sahile yürüme Suit apart Otel,
       uygun ve temiz konaklama
     </title>
 
-    <meta
-      name="description"
-      content="King Life Suite Otel kalitesiyle konaklamanızın mükemmel geçmesi için azami gayret gösteriyoruz"
-    />
+    <meta name="description" content="King Life Suite Otel - Samsun Atakum'da sahile 5 dakika mesafede lüks konaklama. Günlük ve aylık kiralama seçenekleri.">
 
     <meta
       name="keywords"
@@ -43,19 +40,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="vendors/linericon/style.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-
-    <link
-      rel="stylesheet"
-      href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css"
-    />
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css" />
     <!-- main css -->
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="css/responsive.min.css" />
+    <link rel="preload" 
+          href="dist/css/combined.min.css" 
+          as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="dist/css/combined.min.css">
+    </noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -121,7 +115,7 @@
     <!--================Banner Area =================-->
     <section id="home" class="section main-banner">
       <video autoplay muted loop id="bg-video" loading="lazy">
-        <source src="image/background-video.mp4" type="video/mp4" />
+        <source src="image/kinglife/background-video.mp4" type="video/mp4" />
       </video>
 
       <div class="video-overlay header-text">
@@ -178,7 +172,10 @@
           <div class="col-lg-3 col-sm-6">
             <div class="accomodation_item text-center">
               <div class="hotel_img">
-                <img src="image/kinglife/oda-oturma.webp" alt="oturma odası" />
+                <picture>
+                  <source srcset="image/kinglife/oda-oturma.webp" type="image/webp">
+                  <img src="image/kinglife/oda-oturma.webp" alt="oturma odası" loading="lazy">
+                </picture>
                 <a href="#address-area" class="btn theme_btn button_hover"
                   >İletişim</a
                 >
@@ -615,8 +612,10 @@
         <div class="testimonial_slider owl-carousel">
           <div class="media testimonial_item">
             <img
+              width="80"
+              height="80"
               class="rounded-circle"
-              src="image/testimonial-karaoglan2.jpeg"
+              src="image/kinglife/optimized/testimonial-karaoglan2-small.webp"
               alt="B. Karaoglan profil pic"
             />
             <div class="media-body">
@@ -640,7 +639,9 @@
           <div class="media testimonial_item">
             <img
               class="rounded-circle"
-              src="image/testimonial-yuksel.jpeg"
+              src="image/kinglife/optimized/testimonial-yuksel-small.webp"
+              width="80"
+              height="80"
               alt="M. Yuksel profil pic"
             />
             <div class="media-body">
@@ -663,8 +664,8 @@
           <div class="media testimonial_item">
             <img
               class="rounded-circle"
-              src="image/testimonial-sena.png"
-              alt="M. Yuksel profil pic"
+              src="image/kinglife/optimized/testimonial-sena-medium.webp"
+              alt="Sena U. profil pic"
             />
             <div class="media-body">
               <p>
@@ -869,23 +870,47 @@
     </footer>
     <!--================ End footer Area  =================-->
 
+    <!-- Add structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Kings Life Suite Otel",
+        "image": "images/kinglife/optimized/logo-new-sm.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Yenimahalle mah. 3064 sk. no:18",
+          "addressLocality": "Atakum",
+          "addressRegion": "Samsun",
+          "postalCode": "55200",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.354978068055786,
+          "longitude": 36.23264410174094
+        },
+        "priceRange": "₺",
+        "telephone": "+905432263538"
+      }
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      if (typeof jQuery === 'undefined') {
+          document.write('<script src="js/jquery-3.2.1.min.js"><\/script>');
+      }
+    </script>
+
+    <script src="dist/js/bundle.min.js" defer></script>
+
     <script
       src="https://static.elfsight.com/platform/platform.js"
       data-use-service-core
       defer
     ></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="js/custom.js" defer></script>
+    
   </body>
 </html>

@@ -1392,7 +1392,9 @@ button:focus {
 }
 
 .facilities_area .bg-parallax {
-  background: url("../image/facilites_bg.jpg") no-repeat scroll center 0/cover;
+  background-image: image-set(
+    url("../../image/kinglife/optimized/facilites_bg-small.webp") type("image/webp")
+  );
   opacity: 0.15;
 }
 

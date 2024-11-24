@@ -1,129 +1,129 @@
-(function ($) {
-  "use strict";
-  var nav_offset_top = $(".header_area").height() + 50;
+(($) => {
+  'use strict';
+  
+  // Constants
+  const VERSION = '1.0.0';
+  const SCROLL_SPEED = 300;
+  const SCROLL_THRESHOLD = 300;
+  const NAV_OFFSET_TOP = $('.header_area').height() + 50;
 
-  console.log("VERSION 1.0.0 published")
+  // Log version
+  console.log(`VERSION ${VERSION} published`);
 
-  const observer = new IntersectionObserver((events) => {
-    events.forEach((event) => {
-      if (event.isIntersecting) {
-        event.target.classList.add("fade-in-div");
-        return;
-      }
+  // Initialize components
+  const init = () => {
+    initScrollToTop();
+    initNavbar();
+    initTestimonialSlider();
+    initGallery();
+    initParallax();
+    initContactForm();
+    initFadeInEffects();
+  };
 
-      event.target.classList.remove("fade-in-div");
+  // Scroll to top functionality
+  const initScrollToTop = () => {
+    const btn = $('#button');
+    
+    $(window).scroll(() => {
+      btn.toggleClass('show', $(window).scrollTop() > SCROLL_THRESHOLD);
     });
-  });
 
-  const leftFadeInElements = document.querySelectorAll(".left-fade-in");
-  leftFadeInElements.forEach((myElement) => {
-    observer.observe(myElement);
-  });
+    btn.on('click', (e) => {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, SCROLL_SPEED);
+    });
+  };
 
-  var btn = $("#button");
+  // Contact form handler
+  const initContactForm = () => {
+    $('#contactForm').submit((e) => {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      const mailData = {
+        name: form.get('name'),
+        subject: form.get('subject'),
+        message: form.get('message')
+      };
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass("show");
-    } else {
-      btn.removeClass("show");
-    }
-  });
+      const body = `Merhabalar,%0D%0A${mailData.message}%0D%0A%0D%0A%0D%0ASaygılarımla ${mailData.name},`;
+      window.location.href = `mailto:info@kinglifesuite.com?Subject=${mailData.subject}&body=${body}&`;
+      return false;
+    });
+  };
 
-  btn.on("click", function (e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, "300");
-  });
+  // Navbar functionality
+  const initNavbar = () => {
+    if (!$('.header_area').length) return;
+    
+    $(window).scroll(() => {
+      $('.header_area').toggleClass('navbar_fixed', 
+        $(window).scrollTop() >= NAV_OFFSET_TOP
+      );
+    });
+  };
 
-  /** Index mail send  */
+  // Testimonial slider
+  const initTestimonialSlider = () => {
+    const $slider = $('.testimonial_slider');
+    if (!$slider.length) return;
 
-  $("#contactForm").submit(function (e) {
-    e.preventDefault();
-    const form = new FormData(e.target);
-    const name = form.get("name");
-    const subject = form.get("subject");
-    const message = form.get("message");
-    const body = "Merhabalar,%0D%0A" + message + "%0D%0A%0D%0A%0D%0A" + `Saygılarımla ${name},`; // <br /> ...
-    window.location.href = `mailto:info@kinglifesuite.com?Subject=${subject}&body=${body}&`;
-    return false;
-  });
+    $slider.owlCarousel({
+      loop: true,
+      margin: 30,
+      items: 2,
+      nav: false,
+      autoplay: true,
+      dots: true,
+      smartSpeed: 1500,
+      responsiveClass: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 }
+      }
+    });
+  };
 
-  /*-------------------------------------------------------------------------------
-	  Navbar 
-	-------------------------------------------------------------------------------*/
+  // Gallery functionality
+  const initGallery = () => {
+    const $gallery = $('#gallery');
+    if (!$gallery.length) return;
 
-  //* Navbar Fixed
-  function navbarFixed() {
-    if ($(".header_area").length) {
-      $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= nav_offset_top) {
-          $(".header_area").addClass("navbar_fixed");
-        } else {
-          $(".header_area").removeClass("navbar_fixed");
+    $gallery.imagesLoaded(() => {
+      $gallery.isotope({
+        itemSelector: '.gallery_item',
+        layoutMode: 'masonry',
+        animationOptions: {
+          duration: 750,
+          easing: 'linear'
         }
       });
-    }
-  }
-  navbarFixed();
+    });
 
-  function testimonialSlider() {
-    if ($(".testimonial_slider").length) {
-      $(".testimonial_slider").owlCarousel({
-        loop: true,
-        margin: 30,
-        items: 2,
-        nav: false,
-        autoplay: true,
-        dots: true,
-        smartSpeed: 1500,
-        responsiveClass: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-        },
-      });
-    }
-  }
-  testimonialSlider();
+    // Initialize lightbox
+    $('.imageGallery1 .light').simpleLightbox();
+  };
 
-  /* ===== Parallax Effect===== */
+  // Parallax effect
+  const initParallax = () => {
+    $('.bg-parallax').parallax();
+    $('select').niceSelect();
+  };
 
-  function parallaxEffect() {
-    $(".bg-parallax").parallax();
-  }
-  parallaxEffect();
-
-  $("select").niceSelect();
-  $("#datetimepicker11,#datetimepicker1").datetimepicker({
-    daysOfWeekDisabled: [0, 6],
-  });
-
-  /*---------gallery isotope js-----------*/
-  function galleryMasonry() {
-    if ($("#gallery").length) {
-      $("#gallery").imagesLoaded(function () {
-        // images have loaded
-        // Activate isotope in container
-        $("#gallery").isotope({
-          itemSelector: ".gallery_item",
-          layoutMode: "masonry",
-          animationOptions: {
-            duration: 750,
-            easing: "linear",
-          },
+  // Fade in effects
+  const initFadeInEffects = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('fade-in-div', entry.isIntersecting);
         });
-      });
-    }
-  }
-  galleryMasonry();
+      }
+    );
 
-  /*----------------------------------------------------*/
-  /*  Simple LightBox js
-    /*----------------------------------------------------*/
-  $(".imageGallery1 .light").simpleLightbox();
+    document.querySelectorAll('.left-fade-in')
+      .forEach(element => observer.observe(element));
+  };
+
+  // Initialize everything when DOM is ready
+  $(init);
 })(jQuery);
