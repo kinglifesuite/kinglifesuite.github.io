@@ -1,0 +1,24 @@
+{
+  "name": "kinglifesuite",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "gulp",
+    "optimize-images": "node scripts/optimize-images.js",
+    "minify-css": "gulp minify-css",
+    "minify-html": "gulp minify-html",
+    "minify-js": "gulp minify-js",
+    "optimize": "node scripts/optimize.js"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sharp-responsive": "^0.4.1",
+    "gulp-terser": "^2.1.0",
+    "sharp": "^0.33.5",
+    "terser": "^5.27.0",
+    "through2": "^4.0.2"
+  }
+}
