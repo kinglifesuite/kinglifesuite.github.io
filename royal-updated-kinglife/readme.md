@@ -14,3 +14,23 @@ body içinde yedek
         </noscript>
         <!-- End Google Tag Manager (noscript) -->
 
+
+
+Cloudflare Settings:
+
+
+Enable Auto Minify for HTML, CSS, and JS
+Enable Brotli compression
+Set Browser Cache TTL to at least 1 month
+Enable Early Hints
+Enable HTTP/2
+Enable Image Optimization
+
+
+how?
+
+<link rel="preload" 
+      href="fonts/your-main-font.woff2" 
+      as="font" 
+      type="font/woff2" 
+      crossorigin>
